@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+</head>
+<body style="padding: 20px">
+<table class="table">
+    <thead class="table-dark">
+    <tr>
+        <th>ID</th>
+        <th>Creator</th>
+        <th>Email</th>
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td th:text="${creator.getId()}"></td>
+        <td th:text="${creator.getName()}"></td>
+        <td th:text="${creator.getEmail()}"></td>
+        <td>
+            <a class="btn btn-primary" th:text="Update" th:href="@{/updateCreator(id=${creator.getId()})}"></a>
+        </td>
+        <td>
+            <a class="btn btn-danger" th:text="Delete" th:href="@{/deleteCreator(id=${creator.getId()})}"></a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
