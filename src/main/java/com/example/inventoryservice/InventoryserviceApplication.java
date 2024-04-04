@@ -10,7 +10,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @SpringBootApplication
@@ -47,37 +47,37 @@ public class InventoryserviceApplication {
             video1.setName("SHOPPING IN THE MEDINA");
             video1.setUrl("https://youtu.be/uUoYna-Silk?si=e5yZ_Rk92mdBJHIi");
             video1.setDescription("LOREM IPSUM");
-            video1.setDatePublication(new Date(124,3,23));
+            video1.setDatePublication(LocalDate.of(2024,3,23));
             video1.setCreator(creator1);
             Video video2 = new Video();
             video2.setName("BACK TO MEMORIES");
             video2.setUrl("https://youtu.be/2WkmUiA-G7s?si=1KEM-ZCGJw1ZY8v-");
             video2.setDescription("LOREM IPSUM");
-            video2.setDatePublication(new Date(124,3,8));
+            video2.setDatePublication(LocalDate.of(2024,3,8));
             video2.setCreator(creator1);
             Video video3 = new Video();
             video3.setName("SEDPODCAST");
             video3.setUrl("https://youtu.be/amqYvtoulOc?si=jsRfQbxqX09thgyU");
             video3.setDescription("LOREM IPSUM");
-            video3.setDatePublication(new Date(123,06,18));
+            video3.setDatePublication(LocalDate.of(2023,06,18));
             video3.setCreator(creator2);
             Video video4 = new Video();
             video4.setName("CRYPTO");
             video4.setUrl("https://youtu.be/SgM5hQzGTZc?si=KrlXk3EO_5TiYZqV");
             video4.setDescription("LOREM IPSUM");
-            video4.setDatePublication(new Date(122,11,8));
+            video4.setDatePublication(LocalDate.of(2022,11,8));
             video4.setCreator(creator2);
             Video video5 = new Video();
             video5.setName("TRAINING WITH @");
             video5.setUrl("https://youtu.be/JAsQTE9MuUk?si=8v7DLPf4RYlVHK1v");
             video5.setDescription("LOREM IPSUM");
-            video5.setDatePublication(new Date(124,3,3));
+            video5.setDatePublication(LocalDate.of(2024,3,3));
             video5.setCreator(creator3);
             Video video6 = new Video();
             video6.setName("IFTAR WITH @");
             video6.setUrl("https://youtu.be/UjPX4qF1c5s?si=PoQP9pxcms7eDbjV");
             video6.setDescription("LOREM IPSUM");
-            video6.setDatePublication(new Date(124,3,24));
+            video6.setDatePublication(LocalDate.of(2024,3,24));
             video6.setCreator(creator3);
 
             videoManager.addVideo(video1);

@@ -35,7 +35,7 @@ public class CreatorController {
         creator.setName(name);
         creator.setEmail(email);
         creatorManager.addCreator(creator);
-        return getCreators(model);
+        return "redirect:/creatorsList";
     }
 
     @GetMapping("/detailsCreator")
@@ -56,13 +56,16 @@ public class CreatorController {
         creator.setName(name);
         creator.setEmail(email);
         creatorManager.updateCreator(creator);
-        return getCreators(model);
+        return "redirect:/creatorsList";
     }
 
     @GetMapping("/deleteCreator")
-    public String deleteCreator(Model model, @RequestParam(name="id") Integer id){
+    public String deleteCreator(@RequestParam(name="id") Integer id){
         Creator creator = creatorManager.findCreatorById(id);
-        creatorManager.deleteCreator(creator);
-        return getCreators(model);
+        if(creatorManager.deleteCreator(creator)){
+            return "redirect:/creatorsList";
+        }else {
+            return "error";
+        }
     }
 }
