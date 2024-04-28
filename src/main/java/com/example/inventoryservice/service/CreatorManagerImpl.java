@@ -5,7 +5,6 @@ import com.example.inventoryservice.dao.repositories.CreatorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -77,7 +76,7 @@ public class CreatorManagerImpl implements CreatorManager{
     }
 
     @Override
-    public Page<Creator> searchProducts(String keyword, int page, int taille){
+    public Page<Creator> searchCreators(String keyword, int page, int taille){
         return creatorRepository.findCreatorByNameContainingIgnoreCase(keyword, PageRequest.of(page, taille));
     }
 }

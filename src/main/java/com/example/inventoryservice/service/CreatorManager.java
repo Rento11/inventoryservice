@@ -12,5 +12,5 @@ public interface CreatorManager {
     public Creator findCreator(Creator creator);
     public Creator findCreatorById(int id);
     public List<Creator> getAllCreator();
-    public Page<Creator> searchProducts(String keyword, int page, int taille);
+    public Page<Creator> searchCreators(String keyword, int page, int taille);
 }

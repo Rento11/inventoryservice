@@ -22,7 +22,7 @@ public class CreatorController {
 
     @GetMapping("/creatorsList")
     public String getCreators(Model model, @RequestParam(name = "page", defaultValue = "0") int page, @RequestParam(name = "taille", defaultValue = "1") int taille, @RequestParam(name = "search", defaultValue = "") String keyword) {
-        Page<Creator> creators = creatorManager.searchProducts(keyword, page, taille);
+        Page<Creator> creators = creatorManager.searchCreators(keyword, page, taille);
         model.addAttribute("creators", creators.getContent());
         int[] pages = new int[creators.getTotalPages()];
         for (int i = 0; i < pages.length; i++) {
